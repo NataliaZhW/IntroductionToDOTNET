@@ -1,4 +1,6 @@
-﻿using System;
+﻿//#define NUMERIC_TYPES
+//#define LITERALS
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,6 +14,7 @@ namespace DataTypes
         static readonly string delimiter2 = "\n==============================================\n";
         static void Main(string[] args)
         {
+#if NUMERIC_TYPES
             Console.WriteLine("C# DataTypes");
 
             #region Boolean
@@ -66,7 +69,17 @@ namespace DataTypes
             //Console.WriteLine($"Диапазон принимаемых значений 'decimal': {decimal.MinValue} ... {double.MaxValue}");
             Console.WriteLine(delimiter2);
             Console.WriteLine();
+#endif //NUMERIC_TYPES
 
+#if LITERALS
+            Console.WriteLine(123.GetType()); //int
+            Console.WriteLine(123.4f.GetType()); //float
+            Console.WriteLine(123f.GetType()); //float
+            Console.WriteLine(123.4.GetType()); //doufle
+            Console.WriteLine(123.4m.GetType());
+#endif //LITERALS
+            Console.WriteLine(((byte)5).GetType()); //int
+            Console.WriteLine((5).GetType().Name); //int
         }
     }
 }
