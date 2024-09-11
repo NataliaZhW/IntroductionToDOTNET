@@ -4,44 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Figure
+namespace chess
 {
     internal class Program
     {
         static void Main(string[] args)
         {
             int size = 5;
-            for (int i = 0; i < size; i++) // сверху вниз
-            {
-                for (int j = 0; j < size; j++) Console.Write(" *"); //** справа налево
-                Console.WriteLine();
-            }
-            Console.WriteLine("Условно квадрат\n");
-
-            for (int i = 0; i < size; i++)
-            {
-                for (int j = 0; j <= i; j++) Console.Write("*");
-                Console.WriteLine();
-            }
-            Console.WriteLine("Треугольник 1\n");
-            for (int i = 0; i < size; i++)
-            {
-                for (int j = 0; j < size - i; j++) Console.Write("*");
-                Console.WriteLine();
-            }
-            Console.WriteLine("Треугольник 2\n");
-            for (int i = 0; i < size; i++)
-            {
-                for (int j = 0; j < size; j++) if (j < i) Console.Write(" "); else Console.Write("*");
-                Console.WriteLine();
-            }
-            Console.WriteLine("Треугольник 3\n");
-            for (int i = 0; i < size; i++)
-            {
-                for (int j = 0; j < size; j++) if (j < size - i - 1) Console.Write(" "); else Console.Write("*");
-                Console.WriteLine();
-            }
-            Console.WriteLine("Треугольник 4\n");
 
             size = 10;
             for (int i = 0; i < size; i++) // сверху вниз
@@ -70,8 +39,8 @@ namespace Figure
 
 
             Console.Write("Введите размер шахматной доски: ");
-            //size = 7;
-            size = Convert.ToInt32(Console.ReadLine());
+            size = 7;
+            //size = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine();
 
             //for (int i = 0; i < 255; i++) Console.Write(Convert.ToChar(i));
@@ -107,29 +76,22 @@ namespace Figure
 
 
             Console.Write("Введите размер шахматной доски: ");
-            size = Convert.ToInt32(Console.ReadLine());
-            //size = 3;
-            int SQUARE_SIZE = 5;
+            //size = Convert.ToInt32(Console.ReadLine());
+            size = 4;
+            int SQUARE_SIZE = 4;
             Console.WriteLine();
 
-            for (int i = 0; i < size; i++) // сверху вниз
+            for (int i = 0; i < size * SQUARE_SIZE; i++) // сверху вниз
             {
-                for (int ik = 0; ik < SQUARE_SIZE; ik++)//повтор строки
+                for (int j = 0; j < size * SQUARE_SIZE; j++) // справа налево
                 {
-                    for (int j = 0; j < size; j++) // справа налево
-                    {
-                        for (int jk = 0; jk < SQUARE_SIZE; jk++)//повтор символа
-                        {
-                            if (i % 2 == 0 && j % 2 == 0 || i % 2 == 1 && j % 2 == 1) Console.Write("* ");
-                            else Console.Write("  ");
-                        }
-                    }
-                    Console.WriteLine();
+
+                    if (i / SQUARE_SIZE % 2 == 0 && j / SQUARE_SIZE % 2 == 0 || i / SQUARE_SIZE % 2 == 1 && j / SQUARE_SIZE % 2 == 1) Console.Write("* ");
+                    else Console.Write("  ");
                 }
                 Console.WriteLine();
             }
             Console.WriteLine("Большая шахматная доска из символов");
-            
         }
     }
 }

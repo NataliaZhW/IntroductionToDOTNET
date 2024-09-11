@@ -15,6 +15,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Factorial1", "Factorial1\Fa
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cursor", "Cursor\Cursor.csproj", "{1F32ABF2-4410-4C14-9C35-4049B9C2AE56}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "chess", "chess\chess.csproj", "{40AFC060-DB10-4F98-A3A7-8D5FBB3EDBA4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calculator", "Calculator\Calculator.csproj", "{23672B06-CAF7-438C-8D60-4BA236695960}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +49,14 @@ Global
 		{1F32ABF2-4410-4C14-9C35-4049B9C2AE56}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1F32ABF2-4410-4C14-9C35-4049B9C2AE56}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1F32ABF2-4410-4C14-9C35-4049B9C2AE56}.Release|Any CPU.Build.0 = Release|Any CPU
+		{40AFC060-DB10-4F98-A3A7-8D5FBB3EDBA4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{40AFC060-DB10-4F98-A3A7-8D5FBB3EDBA4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{40AFC060-DB10-4F98-A3A7-8D5FBB3EDBA4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{40AFC060-DB10-4F98-A3A7-8D5FBB3EDBA4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{23672B06-CAF7-438C-8D60-4BA236695960}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{23672B06-CAF7-438C-8D60-4BA236695960}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{23672B06-CAF7-438C-8D60-4BA236695960}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{23672B06-CAF7-438C-8D60-4BA236695960}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
