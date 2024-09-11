@@ -3,9 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Numerics;
 
-namespace Factorial
+namespace Factorial1
 {
     internal class Program
     {
@@ -18,8 +17,8 @@ namespace Factorial
             Console.WriteLine("Факториал " + x + " = " + Factorial(x));
             Console.WriteLine();
             int n = 1000;
-            Console.WriteLine("Факториал " + n + " = " + FactorialBig(n));
-            Console.WriteLine();
+            //Console.WriteLine("Факториал " + n + " = " + FactorialBig(n));
+            //Console.WriteLine();
 
             ulong f1 = 1;
             try
@@ -49,38 +48,15 @@ namespace Factorial
             //                Console.WriteLine(ex.Message);
             //            }
         }
-        static BigInteger FactorialBig(int x)
-        {
-            BigInteger f = 1;
-            for (int i = 1; i <= x; i++)
-            {
-                f *= i;
-                //Console.WriteLine(f);                 
-            }
-            return f;
-        }
+        //static BigInteger FactorialBig(int x)
+        //{
+        //    BigInteger f = 1;
+        //    for (int i = 1; i <= x; i++)
+        //    {
+        //        f *= i;
+        //        //Console.WriteLine(f);                 
+        //    }
+        //    return f;
+        //}
     }
 }
-
-//                ulong f = 1;
-//                for (int i = 1; i <= x; i++)
-//                {
-//                    f *= Convert.ToUInt64(i);
-//                    Console.WriteLine($"{i}! = {f}");
-//                } 
-//                return f;
-//        } // 
-
-
-//        //static BigInteger FactorialBig(int x)
-//        //{
-//        //    BigInteger f = 1;
-//        //    for (int i = 1; i <= x; i++)
-//        //    {
-//        //        f *= i;  
-//        //        //Console.WriteLine(f);                 
-//        //    }
-//        //    return f;
-//        //}
-//    }
-//}
