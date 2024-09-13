@@ -77,8 +77,8 @@ namespace chess
 
             Console.Write("Введите размер шахматной доски: ");
             //size = Convert.ToInt32(Console.ReadLine());
-            size = 4;
-            int SQUARE_SIZE = 4;
+            size = 5;
+            const int SQUARE_SIZE = 5;
             Console.WriteLine();
 
             for (int i = 0; i < size * SQUARE_SIZE; i++) // сверху вниз

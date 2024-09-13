@@ -16,34 +16,43 @@ namespace Calculator
             int a = 0; // операнд 1
             int b = 0; // операнд 2
             char o = '+'; // оператор
+            double res = 0; // результат
 
-            Console.SetCursorPosition(x, y);
             ConsoleKey key;// char
             do
             {
                 key = Console.ReadKey(true).Key;
-                //Console.WriteLine("█");
-                a = Convert.ToInt32(Console.ReadKey())
-                Console.WriteLine(Convert.ToChar(key));
-                switch (Convert.ToChar(key))
-                {
-                    case 'h':
-                    case '&':
-                        y--; break;
-                    case 'b':
-                    case '(':
-                        y++; break;
-                    case 'd':
-                    case '%':
-                        x--; break;
-                    case 'f':
-                    case '\'':
-                        x++; break;
-                    default: break;
-                }
-                Console.Clear();
+                a = Convert.ToInt32(key);
                 Console.SetCursorPosition(x, y);
-                Console.WriteLine("█");
+                Console.WriteLine(a);
+
+                //key = Console.ReadKey(true).Key;
+                //o = Convert.ToChar(key);
+                //Console.SetCursorPosition(x + 2, y);
+                //Console.WriteLine(o);
+
+                //key = Console.ReadKey(true).Key;
+                //b = Convert.ToInt32(key);
+                //Console.SetCursorPosition(x + 4, y);
+                //Console.WriteLine(b);
+
+                //Console.WriteLine(Convert.ToChar(key));
+                //switch (o)
+                //{
+                //    case 'k':                    
+                //        res = a+b ; break;
+                //    case 'm':                    
+                //        res = a - b; break;
+                //    case 'j':                    
+                //        res = a * b; break;
+                //    case 'o':                   
+                //        res = a / b; break;
+                //    default: break;
+                //}
+                //Console.Clear();
+                Console.SetCursorPosition(x, y+2);
+                //Console.WriteLine("Результат " + res);
+                Console.WriteLine("Результат " + a);
                 Console.SetCursorPosition(0, 0);
             }
             while (key != ConsoleKey.Escape);

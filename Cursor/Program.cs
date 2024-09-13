@@ -10,8 +10,9 @@ namespace Cursor
     {
         static void Main(string[] args)
         {
-            int x = 10;
-            int y = 10;
+            Random rand = new Random();
+            int x = rand.Next(Console.BufferWidth);
+            int y = rand.Next(Console.BufferHeight);
             Console.SetCursorPosition(x, y);
             Console.WriteLine("█");
             ConsoleKey key;// char
