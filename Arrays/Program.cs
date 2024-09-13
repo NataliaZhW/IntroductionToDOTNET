@@ -80,7 +80,7 @@ namespace Arrays
                     new int[]{ 0, 1, 1 },
                     new int[]{ 2, 3, 5, 8 },
                     new int[]{ 13 },
-                    new int[]{ 21, 34, 55 }
+                    new int[]{ 21, 34, 55 ,4 }
                 };
             int sum = 0;
             int length2 = 0;
@@ -94,17 +94,18 @@ namespace Arrays
                     Console.Write(arr2[i][j] + "\t");
                     sum += arr2[i][j];
                     length2++;
-
+                    if (min > arr2[i][j]) min = arr2[i][j];
+                    if (max < arr2[i][j]) max = arr2[i][j];
                 }
                 Console.WriteLine();
             }
-            cast = sum / length2;
-            //Console.WriteLine($"Сумма элементов массива: {sum}");
-            //Console.WriteLine($"Количество элементов массива: {length2}");
-            //Console.WriteLine($"Среднее-арифметическое элементов массива: {cast}");
-            //Console.WriteLine($"Минимальное значение в массиве: {min}");
-            //Console.WriteLine($"Максимальное значение в массиве: {arr2.Cast<int>().Max()}");//max
-            //Console.WriteLine(); Console.WriteLine();
+            cast = Convert.ToDouble(sum) / Convert.ToDouble(length2);
+            Console.WriteLine($"Сумма элементов массива: {sum}");
+            Console.WriteLine($"Количество элементов массива: {length2}");
+            Console.WriteLine($"Среднее-арифметическое элементов массива: {cast}");
+            Console.WriteLine($"Минимальное значение в массиве: {min}");
+            Console.WriteLine($"Максимальное значение в массиве: {max}");
+            Console.WriteLine(); Console.WriteLine();
 
         }
     }
