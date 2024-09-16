@@ -57,13 +57,13 @@ namespace Point
             {
                 Console.WriteLine($"Координаты точки: X = {x}\tY = {y}");
             }
-            public double distance(Point other)//от текущей до указанной
+            public double Distance(Point other)//от текущей до указанной
             {
                 return Math.Sqrt(Math.Pow(this.x - other.x, 2) + Math.Pow(this.y - other.y, 2));//Pov(основание,степень)
             }
-            public static double distance(Point first, Point second) //между двумя
+            public static double Distance(Point first, Point second) //между двумя
             {
-                return first.distance(second);
+                return first.Distance(second);
             }
         }
         static void Main(string[] args)
@@ -76,9 +76,9 @@ namespace Point
             A.print();
             B.print();
             Console.WriteLine();
-            Console.WriteLine($"от 'A' до 'B': {A.distance(B)}");
+            Console.WriteLine($"от 'A' до 'B': {A.Distance(B)}");
             Console.WriteLine();
-            Console.WriteLine($"между 'A' и 'B': {Point.distance(A, B)}");
+            Console.WriteLine($"между 'A' и 'B': {Point.Distance(A, B)}");
             Console.WriteLine();
 
         }
