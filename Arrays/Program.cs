@@ -12,15 +12,14 @@ namespace Arrays
         {
             Console.Write("Введите размер массива: ");
             //int n = Convert.ToInt32(Console.ReadLine());
-            int n = 30;
+            int n = 5;
             int[] arr = new int[n];
             Random rand = new Random(0);
             //foreach (int i in arr) //здесь нельзя
             Console.WriteLine();
             for (int i = 0; i < arr.Length; i++)
             {
-                arr[i] = rand.Next(100);
-                //i = rand.Next(100);
+                arr[i] = rand.Next(50, 100);                
             }
             foreach (int i in arr) //for (int i = 0; i < arr.Length; i++)
             {
@@ -100,6 +99,7 @@ namespace Arrays
                 Console.WriteLine();
             }
             cast = Convert.ToDouble(sum) / Convert.ToDouble(length2);
+            Console.WriteLine();
             Console.WriteLine($"Сумма элементов массива: {sum}");
             Console.WriteLine($"Количество элементов массива: {length2}");
             Console.WriteLine($"Среднее-арифметическое элементов массива: {cast}");
