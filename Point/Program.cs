@@ -30,7 +30,7 @@ namespace Point
                 get { return x; }
                 set
                 {
-                    //SetX(x); SetX(value);        ?????
+                     SetX(value);//SetX(x);        ?????
                     if (value > 1000) value = 1000;
                     if (value < 0) value = 0;
                     x = value;
@@ -41,19 +41,25 @@ namespace Point
                 get { return y; }
                 set
                 {
-                    //SetY(y); SetY(value);        ?????
-                    if (value > 700) value = 700;
-                    if (value < 0) value = 0;
-                    y = value;
+                    SetY(value);//SetY(y);         ?????
+                    //if (value > 700) value = 700;
+                    //if (value < 0) value = 0;
+                    //y = value;
                 }
             }
             public Point(double x = 0, double y = 0)
             {
-                this.x = x;
-                this.y = y;
+                this.X = x;
+                this.Y = y;
             }
-           
-            public void print()
+            public Point(Point obg)
+            {
+                this.X = obg.X;
+                this.y = obg.y;
+            }
+
+
+            public void Print()
             {
                 Console.WriteLine($"Координаты точки: X = {x}\tY = {y}");
             }
@@ -65,22 +71,37 @@ namespace Point
             {
                 return first.Distance(second);
             }
+            public static Point operator +(Point A, Point B)
+            {
+                return new Point(A.X + B.X, A.Y + B.Y);
+            }
+            public static Point operator -(Point A, Point B)
+            { return new Point(A.X - B.X, A.Y - B.Y); }//=>
+            public static Point operator ++(Point point)
+            {
+                point.x++;
+                point.y++;
+                return point;
+            }
         }
         static void Main(string[] args)
         {
-            Point A = new Point(2, 6);
+            Point A = new Point(2, 6000);
             Point B = new Point(7, 11);
-            A.print();
-            A.SetY(4);
+            A.Print();
+            A.SetY(4000);
             A.X = 5;
-            A.print();
-            B.print();
+            A.Print();
+            B.Print();
             Console.WriteLine();
             Console.WriteLine($"от 'A' до 'B': {A.Distance(B)}");
             Console.WriteLine();
             Console.WriteLine($"между 'A' и 'B': {Point.Distance(A, B)}");
             Console.WriteLine();
-
+            Point C = new Point(B - A);
+            C.Print(); 
+            ++C;
+            C.Print(); 
         }
     }
 }

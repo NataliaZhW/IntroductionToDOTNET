@@ -23,6 +23,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arrays", "Arrays\Arrays.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Point", "Point\Point.csproj", "{F36A48CF-63AE-4BE7-A553-21063B55FC38}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fraction", "Fraction\Fraction.csproj", "{12267966-E46C-4967-80E6-9010F7E6A9FC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -69,6 +71,10 @@ Global
 		{F36A48CF-63AE-4BE7-A553-21063B55FC38}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F36A48CF-63AE-4BE7-A553-21063B55FC38}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F36A48CF-63AE-4BE7-A553-21063B55FC38}.Release|Any CPU.Build.0 = Release|Any CPU
+		{12267966-E46C-4967-80E6-9010F7E6A9FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{12267966-E46C-4967-80E6-9010F7E6A9FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{12267966-E46C-4967-80E6-9010F7E6A9FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{12267966-E46C-4967-80E6-9010F7E6A9FC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
